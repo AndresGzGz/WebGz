@@ -1,0 +1,41 @@
+@model WebGz.Models.Cliente
+@{
+    ViewData["Title"] = "Editar";
+}
+<div class="ContenidoCliente">
+    <div>
+        <h3 class="Nuevo">Detalle</h3>
+    </div>
+    <br>
+    <a class="Boton" asp-action="Index">Volver al listado</a>
+    <br>
+    <div class="ListaClientes">
+        <table class="table">
+            <div>
+                Idcliente: @Model.Idcliente
+            </div>
+            <br>
+            <div>
+                Nombre: @Model.Nombre
+            </div>
+            <br>
+            <div>
+                Apellido: @Model.Apellido
+            </div>
+            <br>
+            <div>
+                CC: @Model.CC
+            </div>
+            <br>
+            <div>
+                Celular: @Model.Celular
+            </div>
+            <br>
+        
+        <div>
+            @Html.ActionLink("Editar", "Editar", new { id = Model.Idcliente})
+            @Html.ActionLink("Borrar", "Borrar", new { id = Model.Idcliente})
+        </div>
+        </table>
+    </div>
+</div>

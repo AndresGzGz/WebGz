@@ -1,0 +1,57 @@
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@model IEnumerable<WebGz.Models.Cliente>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="ContenidoCliente">
+    <div><h3 class="Nuevo">Listar Clientes</h3></div>
+    <br>
+    <a class="Boton" asp-action="Crear">Agregar Nuevo</a>
+    <br>
+    <div class="ListaClientes">
+        <table class="table text-white">
+            <thead>
+                <th class="Margen">IDCliente</th>
+                <th class="Margen">Nombre</th>
+                <th class="Margen">Apellido</th>
+                <th class="Margen">C.C</th>
+                <th class="Margen">Celular</th>
+                <th class="Margen"></th>
+            </thead>
+            <tbody>
+                @foreach (var miCliente in Model)
+                {
+                   <tr>
+                    <td>@miCliente.Idcliente</td>
+                    <td>@miCliente.Nombre</td>
+                    <td>@miCliente.Apellido</td>
+                    <td>@miCliente.CC</td>
+                    <td>@miCliente.Celular</td>
+                    <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = miCliente.Idcliente })
+                    @Html.ActionLink("Detalle", "Detalle", new { id = miCliente.Idcliente })
+                    @Html.ActionLink("Borrar", "Borrar", new { id = miCliente.Idcliente })
+                    </td>
+                   </tr> 
+                }
+            </tbody>
+        </table>
+        <!-- Definimos los objetos de navegacion--
+        Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page= page}),
+        new X.PagedList.Mvc.Core.Common.PagedListRenderOptions{
+            DisplayItemSliceAndTotal = false,
+            ContainerDivClasses = new [] {"navigation"},
+            LiElementClasses = new[] {"page-item"},
+            PageClasses= new [] {"page-link"}
+        })
+         #region  section Scripts{
+          <script>
+              $(document).ready(Function () {
+              $(ul.pagination > li.disabled > a).addClass('page-link');
+              });
+          </script>
+        }
+        -->
+    </div>
+</div>

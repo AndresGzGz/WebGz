@@ -1,0 +1,41 @@
+@model WebGz.Models.Cliente
+@{
+    ViewData["Title"] = "Editar";
+}
+<div class="ContenidoCliente">
+    <div>
+        <h3 class="Nuevo">Esta seguro de borrar los datos del cliente</h3>
+    </div>
+    <br>
+    <a class="Boton" asp-action="Index">Volver al listado</a>
+    <br>
+    <div class="ListaClientes">
+
+        <div>
+            Idcliente: @Model.Idcliente
+        </div>
+        <div>
+            Nombre: @Model.Nombre
+        </div>
+        <div>
+            Apellido: @Model.Apellido
+        </div>
+
+        <div>
+            CC: @Model.CC
+        </div>
+
+        <div>
+            Celular: @Model.Celular
+        </div>
+
+
+        <div>
+            <form asp-action="Borrar">
+                <input type="hidden" asp-for="Idcliente" />
+                <input type="submit" class="Boton" value="Borar" />
+            </form>
+        </div>
+
+    </div>
+</div>

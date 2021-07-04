@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  ul{
+      list-style: none;
+  }
+  .Logo {
+    width: 50%;
+    width: 200px;
+  }
+  .Menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    align-items: center;
+    text-align: right;
+  }
+  .Menu li a{
+    color: #ffffff;
+    list-style: none;
+    text-decoration-style: none;
+    text-decoration: none;
+  }
+  .Menu li a:hover{
+    border-bottom: 2px solid white;
+  }
+  .Boton:hover{
+    border-bottom: 2px solid rgb(28, 17, 121);
+    text-align: center;
+    color:rgb(17, 32, 168);
+  }
+  .Boton{
+    color: rgb(255, 255, 255);
+  }
+  .EstiloBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #5fc7d2;
+  }
+  .EstiloSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff
+  }
+  /*Contenido*/
+  .Contenido {
+    
+    background-color: white;
+    padding: 50px;
+    width: 70%;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  
+  }
+  .TextoContenido{
+    margin:auto;
+    color: #31a1ac;
+  }
+  
+  
+  .ImagenContenido{
+  width: 50px;
+  }
+  .Footer{
+    
+    background-color:white;
+    padding: 20px;
+    width: 90%;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 50px;
+    margin: auto;
+    color: #31a1ac;
+    display: flex;
+    text-align: center;
+  }
+  .Github{
+    margin: 30px;
+   width: 10%;
+  }
+  .LetraFooter{
+    margin: auto; 
+  }
+  /*Contenidoindex*/
+  .Contenidoindex {
+    background-color: white;
+    padding: 50px;
+    width: 70%;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  }
+  .TextoContenidoindex{
+    margin:auto;
+    color: #31a1ac;
+  }
+  
+  
+  .ImagenContenidoindex{
+  width: 500PX;
+  }
+
+  .Contenedor50{
+    width: 50%;
+    color: black;
+    background-color: white;
+    padding: 15px 25px 15px 25px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+
+  }
+  .EstiloListarClientes{
+    text-align: center;
+    display: flex;
+  }
+.EstiloBT{
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 500;
+  color: black;
+  padding: 5px;
+  background-color: gray;
+}
+.EstiloBT:hover{
+  background-color: deeppink;
+
+}
+.Contenedor30{
+  color: black;
+  width: 60%;
+  background-color: white;
+  padding: 15px 25px 15px 25px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.Contenedor60{
+  color: black;
+  width: 60%;
+  background-color: white;
+  padding: 15px 25px 15px 25px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.Nuevo{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.EditarP{
+  color: rgb(255, 255, 255);
+}
+.ContenidoCliente{
+  background-color:gray;
+    padding: 80px; 
+    padding-right: 120px;
+    padding-left: 50px;
+    width: 70%;
+    border: 5px solid white;
+    border-radius: 50px;
+    margin: auto;
+    text-align: center;
+}
+.Espacio{
+  padding-right: 5px;
+}
+.ListaClientes{
+  color: white;
+  align-items: initial;
+  text-align: center;
+}
+
+.Margen{
+  margin-right: 7px;
+}
+
+.text-danger{
+  color: rgb(31, 66, 224)
+}

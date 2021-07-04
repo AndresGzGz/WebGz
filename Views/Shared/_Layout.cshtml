@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="~/css/EstilosWeb3.css" />
+  <title>@ViewData["Title"] - WebAndres</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="EstiloBody">
+  <header>
+    <section class="EstiloSection">
+      <div>
+        <img class="Logo" src="~/images/Logo.jpg" alt="" />
+      </div>
+      <div class="TituloNombre">
+        <h1>BASE DE DATOS</h1>
+      </div>
+    </section>
+  </header>
+
+  <nav>
+    <div>
+      <ul class="Menu">
+        <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+        <li><a asp-controller="Home" asp-action="Nosotros">Nosotros</a></li>
+        <li><a asp-controller="Home" asp-action="Objetivos">Objetivos</a></li>
+        <li><a asp-controller="Home" asp-action="Contacto">Contacto</a></li>
+        <li><a asp-controller="Cliente" asp-action="Index">Cliente</a></li>
+        
+        @if (User.Identity.IsAuthenticated)
+        {
+        <li><a asp-controller="Home" asp-action="Private">Privado</a></li>
+        }
+        @if (User.Identity.IsAuthenticated)
+        {
+          <li class="Menu">
+            <a asp-controller="Home" asp-action="Logout">Cerrar sesion</a>
+          </li>
+        }
+        @if (!User.Identity.IsAuthenticated)
+        {
+          <li class="Menu">
+            <a asp-controller="Home" asp-action="Welcome">Iniciar Sesion</a>
+          </li>
+        }
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <main>
+    <!--Acá va el contenido-->
+    @RenderBody()
+  </main>
+
+  <br>
+  <footer>
+    <div class="Footer">
+      <p class="LetraFooter">By: Andres Felipe Garces Muñoz</p>
+      <img class="Github" src="~/images/Github.png" alt="">
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

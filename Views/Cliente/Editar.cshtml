@@ -1,0 +1,45 @@
+@model WebGz.Models.Cliente
+@{
+    ViewData["Title"] = "Editar";
+}
+<div class="ContenidoCliente">
+    <div><h3 class="Nuevo">Editar</h3></div>
+    <br>
+    <a class="Boton" asp-action="Index">Volver al listado</a>
+    <br>
+    <div class="ListaClientes">
+    <form asp-action=Editar>
+        <div>
+           
+            <input asp-for="Idcliente" type="hidden"/>
+            <br>
+            <span class="text-danger">@ViewData["Msj"]</span>      
+        </div>
+
+        <div>
+            <label asp-for="Nombre" class="Control-Label"></label>
+            <input asp-for="Nombre" class="form-control" required/>        
+        </div>
+
+        <div>
+            <label asp-for="Apellido" class="Control-Label"></label>
+            <input asp-for="Apellido" class="form-control" required/>        
+        </div>
+
+        <div>
+            <label asp-for="CC" class="Control-Label"></label>
+            <input asp-for="CC" class="form-control" required/>        
+        </div>
+
+        <div>
+            <label asp-for="Celular" class="Control-Label"></label>
+            <input asp-for="Celular" class="form-control" required/>        
+        </div>
+
+        <div>
+            <input type="submit" class="Boton" value="Actualizar"/>        
+        </div>
+        
+    </form> 
+    </div>
+</div>
